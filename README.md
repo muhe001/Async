@@ -1,7 +1,7 @@
 # Async Library for Arduino
 A simple library for Arduino, utilizing an event loop and message queues, to help facilitate simple easy to use asynchronous control flow patterns.
 
-## Instilation
+## Installation
 Copy the folder Async into your Arduino Libraries folder, as described in the Arduino [documentation](http://www.arduino.cc/en/Guide/Libraries).
 
 ## Dependencies
@@ -33,6 +33,6 @@ With context:
 ...
 
     Async::setTimeout([](void* context) {
-      // cast context to int and dereference 
-      int note = *((int *) context);
+      // cast context to int and dereference
+      int myCapturedInt = *((int *) context);
     }, 1500, &myInt);
